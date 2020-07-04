@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Zom zom</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+  
+</head>
+
+<body>
+ <div class="login">
+  <h1>Predicting cost for two</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="can we book a table" placeholder="can we book a table?" required="required" /><br>
+      <input type="text" name="can order on zom" placeholder="can order on zom?" required="required" /><br>
+      <input type="text" name="delivery reviews" placeholder="delivery reviews?" required="required" /><br>
+      <input type="text" name="dining reviews" placeholder="dining reviews?" required="required" /><br>
+      <input type="text" name="discount" placeholder="discount?" required="required" /><br>
+      <input type="text" name="menu available on zom" placeholder="menu available on zom?" required="required" /><br>
+      <input type="text" name="restaurant type" placeholder="restaurant type?" required="required" /><br>
+      <input type="text" name="review rating" placeholder="review rating?" required="required" /><br>
+      <input type="text" name="dining rating" placeholder="dining rating?" required="required" /><br>
+      <input type="text" name="delivery rating" placeholder="delivery rating?" required="required" /><br>
+      
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    <div>
+        {{ prediction_text }}
+    </div>
+
+  </div>
+</body>
+</html>
